@@ -22,4 +22,7 @@ export class MoneyEntity {
     return new MoneyEntity(this.amount.negated())
   }
 
+  isPositiveOrZero(): boolean {
+    return this.amount.comparedTo(0) >= 0
+  }
 }

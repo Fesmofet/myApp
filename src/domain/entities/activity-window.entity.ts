@@ -13,7 +13,7 @@ export class ActivityWindowEntity {
     return this;
   }
 
-  public calculate(accountId : AccountId) : MoneyEntity {
+  public calculateBalance(accountId : AccountId) : MoneyEntity {
     const depositeBalance = this.activities
       .filter((activity) => activity.targetAccountId === accountId)
       .map((activity) => activity.money)
